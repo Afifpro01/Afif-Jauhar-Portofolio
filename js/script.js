@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Ubah judul tab
             const pageName = href.replace('.html', '');
-            document.title = `Loading ${pageName}... - Affi Jauhar`;
+            document.title = `Loading ${pageName}... - Afif Jauhar`;
             
             // Tunggu animasi selesai, baru pindah halaman
             setTimeout(() => {
@@ -210,5 +210,5 @@ window.addEventListener('load', function() {
     // Ubah judul kembali normal
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const pageName = currentPage.replace('.html', '');
-    document.title = `${pageName.charAt(0).toUpperCase() + pageName.slice(1)} - Affi Jauhar`;
+    document.title = `${pageName.charAt(0).toUpperCase() + pageName.slice(1)} - Afif Jauhar`;
 });
