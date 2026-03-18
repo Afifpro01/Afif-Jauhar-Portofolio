@@ -47,8 +47,6 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('nav-placeholder').innerHTML = data;
-                
-                // Menandai menu aktif
                 document.querySelector('.nav-home')?.classList.add('active');
             });
     </script>
