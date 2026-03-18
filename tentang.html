@@ -3,64 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Saya - Website Saya</title>
+    <title>Tentang - Affi Jauhar Portofolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Tentang Saya 👤</h1>
+            <h1>Affi Jauhar 👤</h1>
             <p class="subtitle">Kenali saya lebih dekat</p>
         </header>
         
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="tentang.html" class="active">Tentang</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="kontak.html">Kontak</a>
-        </nav>
+        <!-- Tempat Navigasi -->
+        <div id="nav-placeholder"></div>
         
         <section>
-            <h2>👋 Halo, Saya [Nama Anda]</h2>
+            <h2>📋 Profil Singkat</h2>
             <div class="card">
-                <p>Saya seorang web developer pemula yang sedang belajar membuat website. Saat ini saya fokus mempelajari HTML, CSS, dan JavaScript.</p>
-                <p>Saya percaya bahwa teknologi bisa membantu banyak orang, dan saya ingin berkontribusi melalui website yang saya buat.</p>
+                <p><strong>Nama:</strong> Affi Jauhar</p>
+                <p><strong>Domisili:</strong> Indonesia</p>
+                <p><strong>Pekerjaan:</strong> Web Developer (Pemula)</p>
+                <p><strong>Minat:</strong> Pengembangan Web, Desain UI/UX, Teknologi Terbaru</p>
             </div>
             
-            <h2>🎯 Skill yang Saya Pelajari</h2>
+            <h2>🎯 Skill yang Dikuasai</h2>
             <div class="skill-tags">
                 <span class="skill-tag">HTML5</span>
                 <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">JavaScript (dasar)</span>
+                <span class="skill-tag">JavaScript (Dasar)</span>
                 <span class="skill-tag">Git & GitHub</span>
                 <span class="skill-tag">Responsive Design</span>
+                <span class="skill-tag">Bootstrap (Belajar)</span>
             </div>
             
-            <h2>📚 Timeline Belajar</h2>
+            <h2>📚 Perjalanan Belajar</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <h4>Mulai Belajar HTML</h4>
-                    <p class="timeline-date">Januari 2024</p>
-                    <p>Mempelajari dasar-dasar HTML dan struktur website.</p>
+                    <div class="timeline-date">Januari 2024</div>
+                    <p>Mempelajari struktur dasar website dan elemen-elemen HTML.</p>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Belajar CSS</h4>
-                    <p class="timeline-date">Februari 2024</p>
-                    <p>Mulai mendesain website dengan CSS, termasuk layout dan warna.</p>
+                    <h4>Belajar CSS & Desain</h4>
+                    <div class="timeline-date">Februari 2024</div>
+                    <p>Memahami styling, layout, flexbox, grid, dan membuat website menarik.</p>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Git & GitHub</h4>
-                    <p class="timeline-date">Maret 2024</p>
-                    <p>Belajar version control dan publish website ke GitHub Pages.</p>
+                    <h4>Git & GitHub Pages</h4>
+                    <div class="timeline-date">Maret 2024</div>
+                    <p>Belajar version control dan mempublikasikan website secara gratis.</p>
                 </div>
+                
+                <div class="timeline-item">
+                    <h4>JavaScript Interaktif</h4>
+                    <div class="timeline-date">April 2024</div>
+                    <p>Menambahkan interaktivitas dan fitur dinamis ke website.</p>
+                </div>
+            </div>
+            
+            <h2>🎬 Hobi & Aktivitas</h2>
+            <div class="card">
+                <p>Di luar coding, saya suka:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>📖 Membaca buku teknologi & pengembangan diri</li>
+                    <li>🎮 Bermain game (terutama yang menantang logika)</li>
+                    <li>🎧 Mendengarkan musik sambil coding</li>
+                    <li>☕ Ngopi sambil ngulik teknologi baru</li>
+                </ul>
             </div>
         </section>
         
         <footer>
-            <p>© 2024 Website Multi-Halaman. Dibuat dengan ❤️</p>
+            <p>© <span id="tahun"></span> Affi Jauhar. Dibuat dengan ❤️</p>
         </footer>
     </div>
+    
+    <script src="js/script.js"></script>
+    <script>
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+                document.querySelector('.nav-tentang')?.classList.add('active');
+            });
+    </script>
 </body>
 </html>

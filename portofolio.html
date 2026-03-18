@@ -3,76 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Website Saya</title>
+    <title>Portofolio - Affi Jauhar</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Portfolio Saya 💼</h1>
+            <h1>Portofolio Saya 💼</h1>
             <p class="subtitle">Karya dan project yang pernah saya buat</p>
         </header>
         
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="tentang.html">Tentang</a>
-            <a href="portfolio.html" class="active">Portfolio</a>
-            <a href="kontak.html">Kontak</a>
-        </nav>
+        <!-- Tempat Navigasi -->
+        <div id="nav-placeholder"></div>
         
         <section>
-            <h2>🚀 Project Terbaru</h2>
+            <h2>🚀 Project Unggulan</h2>
             
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div style="background: #667eea; height: 150px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <span style="font-size: 3em;">📄</span>
-                    </div>
+                    <div class="portfolio-image">📄</div>
                     <div class="portfolio-info">
-                        <h3>Website Profil</h3>
-                        <p>Website profil pribadi dengan HTML & CSS</p>
-                        <a href="#" class="btn btn-small">Lihat Project</a>
+                        <h3>Website Profil Pribadi</h3>
+                        <p>Website portofolio pertama dengan HTML & CSS murni. Responsif dan modern.</p>
+                        <a href="#" class="btn btn-small">Lihat Project →</a>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
-                    <div style="background: #764ba2; height: 150px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <span style="font-size: 3em;">📝</span>
-                    </div>
+                    <div class="portfolio-image">🎨</div>
                     <div class="portfolio-info">
-                        <h3>Landing Page</h3>
-                        <p>Landing page sederhana untuk produk</p>
-                        <a href="#" class="btn btn-small">Lihat Project</a>
+                        <h3>Landing Page Produk</h3>
+                        <p>Halaman landing page untuk produk digital dengan desain menarik.</p>
+                        <a href="#" class="btn btn-small">Lihat Project →</a>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
-                    <div style="background: #667eea; height: 150px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <span style="font-size: 3em;">📊</span>
-                    </div>
+                    <div class="portfolio-image">📝</div>
                     <div class="portfolio-info">
-                        <h3>Portfolio Website</h3>
-                        <p>Website portfolio multi-halaman ini</p>
-                        <a href="#" class="btn btn-small">Lihat Project</a>
+                        <h3>To-Do List App</h3>
+                        <p>Aplikasi daftar tugas sederhana dengan JavaScript (coming soon).</p>
+                        <a href="#" class="btn btn-small">Lihat Project →</a>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
-                    <div style="background: #764ba2; height: 150px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <span style="font-size: 3em;">🔧</span>
-                    </div>
+                    <div class="portfolio-image">🔧</div>
                     <div class="portfolio-info">
-                        <h3>Coming Soon</h3>
-                        <p>Project berikutnya dalam pengembangan</p>
-                        <a href="#" class="btn btn-small">Lihat Project</a>
+                        <h3>Website Multi-Halaman</h3>
+                        <p>Website ini sendiri! Dibuat dengan navigasi terpisah dan CSS modular.</p>
+                        <a href="#" class="btn btn-small">Lihat Project →</a>
                     </div>
                 </div>
+            </div>
+            
+            <h2>📊 Statistik Belajar</h2>
+            <div class="card">
+                <p>✅ 4+ Project telah diselesaikan</p>
+                <p>✅ 500+ jam belajar coding</p>
+                <p>✅ 10+ repository di GitHub</p>
+                <p>✅ 2 website sudah dipublikasikan</p>
             </div>
         </section>
         
         <footer>
-            <p>© 2024 Website Multi-Halaman. Dibuat dengan ❤️</p>
+            <p>© <span id="tahun"></span> Affi Jauhar. Dibuat dengan ❤️</p>
         </footer>
     </div>
+    
+    <script src="js/script.js"></script>
+    <script>
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+                document.querySelector('.nav-portofolio')?.classList.add('active');
+            });
+    </script>
 </body>
 </html>

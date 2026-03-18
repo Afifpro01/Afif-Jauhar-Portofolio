@@ -3,175 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Sederhana Saya</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-        }
-        
-        h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            color: #666;
-            font-size: 1.1em;
-        }
-        
-        nav {
-            margin: 20px 0;
-            text-align: center;
-        }
-        
-        nav a {
-            color: #667eea;
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 8px 15px;
-            border-radius: 25px;
-            transition: all 0.3s;
-            font-weight: 500;
-        }
-        
-        nav a:hover {
-            background: #667eea;
-            color: white;
-        }
-        
-        section {
-            margin: 40px 0;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-        
-        h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-        
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 5px solid #667eea;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #ddd;
-            color: #666;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-top: 15px;
-            transition: background 0.3s;
-        }
-        
-        .btn:hover {
-            background: #764ba2;
-        }
-    </style>
+    <title>Home - Affi Jauhar Portofolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Selamat Datang! 👋</h1>
-            <p class="subtitle">Website pertama saya yang dipublikasikan dengan GitHub Desktop</p>
+            <h1>Affi Jauhar 👋</h1>
+            <p class="subtitle">Web Developer Pemula | Pecinta Teknologi</p>
         </header>
         
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#kontak">Kontak</a>
-        </nav>
+        <!-- Tempat Navigasi -->
+        <div id="nav-placeholder"></div>
         
-        <section id="home">
-            <h2>🏠 Halaman Utama</h2>
+        <section>
+            <h2>🏠 Selamat Datang</h2>
             <div class="card">
-                <p>Halo! Ini adalah website sederhana yang saya buat dan publish menggunakan GitHub Desktop. Website ini sudah online dan bisa diakses siapa saja di internet!</p>
-                <a href="#tentang" class="btn">Kenali Saya Lebih Lanjut →</a>
+                <p>Halo! Saya Affi Jauhar. Selamat datang di website portofolio pribadi saya.</p>
+                <p>Di sini Anda bisa mengetahui lebih lanjut tentang saya, melihat project-project yang pernah saya buat, dan menghubungi saya jika tertarik untuk berkolaborasi.</p>
+                <a href="tentang.html" class="btn">Kenali Saya Lebih Lanjut →</a>
             </div>
-        </section>
-        
-        <section id="tentang">
-            <h2>👤 Tentang Saya</h2>
+            
             <div class="card">
-                <p>Saya sedang belajar membuat website. Sekarang saya sudah bisa:</p>
+                <h3>✨ Yang Saya Lakukan</h3>
                 <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>Membuat halaman HTML</li>
-                    <li>Menambahkan gaya dengan CSS</li>
-                    <li>Menggunakan GitHub Desktop</li>
-                    <li>Mempublikasikan website ke internet</li>
+                    <li>Membuat website sederhana dengan HTML & CSS</li>
+                    <li>Belajar JavaScript untuk interaktivitas</li>
+                    <li>Mengelola repository dengan Git & GitHub</li>
+                    <li>Mendesain tampilan yang responsif</li>
                 </ul>
             </div>
         </section>
         
-        <section id="portfolio">
-            <h2>💼 Portfolio</h2>
-            <div class="card">
-                <h3>Project 1: Website Sederhana</h3>
-                <p>Website pertama yang saya publish menggunakan GitHub Pages.</p>
-            </div>
-            <div class="card">
-                <h3>Project 2: (Coming Soon)</h3>
-                <p>Project berikutnya sedang dalam pengembangan.</p>
-            </div>
-        </section>
-        
-        <section id="kontak">
-            <h2>📞 Kontak Saya</h2>
-            <div class="card">
-                <p>📧 Email: email.saya@contoh.com</p>
-                <p>🐱 GitHub: github.com/username-saya</p>
-                <p>📱 Instagram: @username_saya</p>
-            </div>
-        </section>
-        
         <footer>
-            <p>© 2024 Website Sederhana. Dibuat dengan ❤️ menggunakan GitHub Desktop</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Website ini live di GitHub Pages!</p>
+            <p>© <span id="tahun"></span> Affi Jauhar. Dibuat dengan ❤️</p>
         </footer>
     </div>
+    
+    <script src="js/script.js"></script>
+    <script>
+        // Memuat navigasi
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+                
+                // Menandai menu aktif
+                document.querySelector('.nav-home')?.classList.add('active');
+            });
+    </script>
 </body>
 </html>
